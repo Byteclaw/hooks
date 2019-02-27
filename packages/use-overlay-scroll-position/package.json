@@ -1,0 +1,58 @@
+{
+  "name": "@byteclaw/use-overlay-scroll-position",
+  "version": "1.0.0",
+  "description": "React hook for calculating number of pixels scrolled through in an overflow:scroll enabled container",
+  "main": "dist/use-overlay-scroll-position.cjs.js",
+  "umd:main": "dist/use-overlay-scroll-position.umd.js",
+  "jsnext:main": "dist/use-overlay-scroll-position.m.js",
+  "module": "dist/use-overlay-scroll-position.m.js",
+  "typings": "dist/index.d.js",
+  "scripts": {
+    "build": "npx tsc && rollup -c",
+    "lint": "tslint -p .",
+    "prebuild": "rimraf dist temp",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.7.13",
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
+    "react-dom": "^16.8.3",
+    "react-testing-library": "^5.3.0",
+    "typescript": "^3.2.2"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteclaw/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byteclaw/hooks/issues"
+  },
+  "homepage": "https://github.com/byteclaw/hooks#readme",
+  "contributors": [
+    {
+      "name": "Michal Kvasničák",
+      "url": "https://github.com/michalkvasnicak"
+    },
+    {
+      "name": "Juraj Hríb",
+      "url": "https://github.com/jurajhrib"
+    }
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

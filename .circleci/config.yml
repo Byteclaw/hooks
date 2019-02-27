@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/hooks
+    docker:
+      - image: circleci/node:10.12.0
+        environment:
+          CI: 1
+      - image: browserless/chrome:release-chrome-stable
+    steps:
+      - checkout
+      - run:
+          name: Upgrade yarn to 1.12.3
+          command: sudo npm install -g yarn@1.12.3
+      - run:
+          name: Installing javascript dependencies
+          command: yarn install
+      - run:
+          name: Linting the source code
+          command: yarn lint
+      - run:
+          name: Build packages
+          command: yarn build
+      - run:
+          name: Typechecking the source code
+          command: yarn typecheck
+      - run:
+          name: Testing the source code
+          command: yarn test:ci
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - build

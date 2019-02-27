@@ -1,0 +1,12 @@
+node_modules
+coverage
+**/__diff_output__/*
+!**/__diff_output__/.gitkeep
+*.log
+.vscode/*
+!.vscode/tasks.json
+.idea
+.cache
+build
+packages/**/*.tgz
+dist
