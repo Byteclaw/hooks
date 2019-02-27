@@ -40,4 +40,3 @@ function useOverflowScrollPosition(ref: MutableRefObject<HTMLElement | null>) {
 }
 
 export { useOverflowScrollPosition };
-export default useOverflowScrollPosition;

@@ -1,6 +1,6 @@
 import React, { Fragment, ReactNode, useRef } from 'react';
 import { fireEvent, render } from 'react-testing-library';
-import useOverflowScrollPosition from '../index';
+import { useOverflowScrollPosition } from '../index';
 
 function BigBox() {
   const box = useRef<HTMLDivElement>(null);

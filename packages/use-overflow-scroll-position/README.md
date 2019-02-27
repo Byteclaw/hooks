@@ -7,7 +7,7 @@ Here is a quick example with a simple scrollable div container rendering a child
 
 
 ```jsx
-import useOverflowScrollPosition from '@byteclaw/use-overflow';
+import { useOverflowScrollPosition } from '@byteclaw/use-overflow';
 
 function ScrollableBox(children) {
   const box = useRef(null);
