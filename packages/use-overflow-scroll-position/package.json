@@ -8,8 +8,8 @@
   "module": "dist/use-overflow-scroll-position.m.js",
   "typings": "dist/index.d.js",
   "scripts": {
-    "build": "npx tsc && rollup -c",
-    "lint": "tslint -p .",
+    "build": "npx tsc && @todo",
+    "lint": "eslint src/**/*.{ts,tsx}",
     "prebuild": "rimraf dist temp",
     "prepublishOnly": "npm run build",
     "test": "jest",
@@ -23,7 +23,7 @@
   "devDependencies": {
     "react-dom": "^16.8.3",
     "react-testing-library": "^5.3.0",
-    "typescript": "^3.2.2"
+    "typescript": "3.2.2"
   },
   "sideEffects": false,
   "repository": {
@@ -54,5 +54,31 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!**/__tests__/**",
+      "!**/__fixtures__/**",
+      "!**/dist/**",
+      "!**/temp/**"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest/setup.js"
+    ],
+    "moduleDirectories": [
+      "./node_modules",
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    }
   }
 }

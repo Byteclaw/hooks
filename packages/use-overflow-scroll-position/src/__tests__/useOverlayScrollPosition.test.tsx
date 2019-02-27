@@ -1,4 +1,3 @@
-// tslint:disable:jsx-no-lambda
 import React, { Fragment, ReactNode, useRef } from 'react';
 import { fireEvent, render } from 'react-testing-library';
 import useOverflowScrollPosition from '../index';
@@ -31,11 +30,11 @@ function Box({
 }) {
   const box = useRef<HTMLDivElement>(null);
   const [position, height] = useOverflowScrollPosition(box);
-  
+
   onChange([position, height]);
 
   const { current } = box;
-  
+
   if (current != null) {
     current.style.overflowY = 'scroll';
     current.style.height = '100px';
@@ -54,9 +53,11 @@ function Box({
 describe('useOverflowScrollPosition hook', () => {
   it('works corretly', async () => {
     const onChangeMock = jest.fn();
-    let values :[number | null, number | null] = [null, null];
-    const setValues = (val: [number | null, number | null]) => { values = val };
-    onChangeMock.mockImplementation((val) => setValues(val));
+    let values: [number | null, number | null] = [null, null];
+    const setValues = (val: [number | null, number | null]) => {
+      values = val;
+    };
+    onChangeMock.mockImplementation(val => setValues(val));
 
     const { getByTestId } = render(
       <Box onChange={onChangeMock}>
@@ -65,7 +66,6 @@ describe('useOverflowScrollPosition hook', () => {
     );
 
     getByTestId('box').scrollTop = 200;
-
 
     expect(values[0]).toBe(0);
 

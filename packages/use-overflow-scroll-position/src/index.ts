@@ -9,7 +9,10 @@ function useOverflowScrollPosition(ref: MutableRefObject<HTMLElement | null>) {
   const handleScroll = useCallback(
     function handle() {
       if (ref.current != null) {
-        setScrollProperties([ref.current.scrollTop + ref.current.clientHeight, ref.current.scrollHeight]);
+        setScrollProperties([
+          ref.current.scrollTop + ref.current.clientHeight,
+          ref.current.scrollHeight,
+        ]);
       }
     },
     [ref],
