@@ -1,4 +1,5 @@
 # @Byteclaw/hooks
+[![CircleCI](https://circleci.com/gh/Byteclaw/hooks/tree/master.svg?style=svg&circle-token=eb0ec74cc57584f66be91ba7b2f56285fd919b0c)](https://circleci.com/gh/Byteclaw/hooks/tree/master)
 
 Useful [React](https://github.com/facebook/react) hooks for your [Components](https://github.com/byteclaw/visage).
 
