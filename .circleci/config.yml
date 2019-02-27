@@ -7,7 +7,6 @@ jobs:
       - image: circleci/node:10.12.0
         environment:
           CI: 1
-      - image: browserless/chrome:release-chrome-stable
     steps:
       - checkout
       - run:
