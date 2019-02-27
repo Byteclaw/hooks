@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-lambda
 import React, { Fragment, ReactNode, useRef } from 'react';
 import { fireEvent, render } from 'react-testing-library';
-import useOverlayScrollPosition from '../index';
+import useOverflowScrollPosition from '../index';
 
 function BigBox() {
   const box = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ function Box({
   onChange: (val: [number | null, number | null]) => any;
 }) {
   const box = useRef<HTMLDivElement>(null);
-  const [position, height] = useOverlayScrollPosition(box);
+  const [position, height] = useOverflowScrollPosition(box);
   
   onChange([position, height]);
 
@@ -51,7 +51,7 @@ function Box({
   );
 }
 
-describe('useOverlayScrollPosition hook', () => {
+describe('useOverflowScrollPosition hook', () => {
   it('works corretly', async () => {
     const onChangeMock = jest.fn();
     let values :[number | null, number | null] = [null, null];

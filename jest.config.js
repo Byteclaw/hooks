@@ -4,6 +4,6 @@ module.exports = {
   // globalSetup: '<rootDir>/node_modules/jest-environment-puppeteer/setup',
   // globalTeardown: '<rootDir>/node_modules/jest-environment-puppeteer/teardown',
   projects: [
-    '<rootDir>/packages/use-overlay-scroll-position/jest.config.js',
+    '<rootDir>/packages/use-overflow-scroll-position/jest.config.js',
   ],
 };

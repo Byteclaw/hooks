@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 
 const input = 'temp/index.js';
 const external = id => !id.startsWith('\0') && !id.startsWith('.') && !id.startsWith('/');
-const name = 'byteclaw.use-overlay-scroll-position';
+const name = 'byteclaw.use-overflow-scroll-position';
 
 const babelCJS = {
   babelrc: false,
@@ -35,7 +35,7 @@ export default [
     input,
     output: {
       exports: 'named',
-      file: 'dist/use-overlay-scroll-position.cjs.js',
+      file: 'dist/use-overflow-scroll-position.cjs.js',
       format: 'cjs',
     },
     plugins: [
@@ -56,7 +56,7 @@ export default [
     input,
     output: {
       exports: 'named',
-      file: 'dist/use-overlay-scroll-position.cjs.min.js',
+      file: 'dist/use-overflow-scroll-position.cjs.min.js',
       format: 'cjs',
     },
     plugins: [
@@ -77,7 +77,7 @@ export default [
     input,
     external,
     output: {
-      file: 'dist/use-overlay-scroll-position.m.js',
+      file: 'dist/use-overflow-scroll-position.m.js',
       format: 'esm',
     },
     plugins: [
@@ -94,7 +94,7 @@ export default [
   // umd
   {
     input,
-    output: { exports: 'named', file: 'dist/use-overlay-scroll-position.umd.js', format: 'umd', name, globals },
+    output: { exports: 'named', file: 'dist/use-overflow-scroll-position.umd.js', format: 'umd', name, globals },
     external: Object.keys(globals),
     plugins: [
       nodeResolve({
@@ -109,7 +109,7 @@ export default [
   // umd prod
   {
     input,
-    output: { exports: 'named', file: 'dist/use-overlay-scroll-position.umd.min.js', format: 'umd', name, globals },
+    output: { exports: 'named', file: 'dist/use-overflow-scroll-position.umd.min.js', format: 'umd', name, globals },
     external: Object.keys(globals),
     plugins: [
       nodeResolve({

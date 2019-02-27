@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: '@byteclaw/use-overlay-scroll-position',
+  displayName: '@byteclaw/use-overflow-scroll-position',
   rootDir: __dirname,
   globals: {
     'ts-jest': {

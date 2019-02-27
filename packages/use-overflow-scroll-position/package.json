@@ -1,11 +1,11 @@
 {
-  "name": "@byteclaw/use-overlay-scroll-position",
+  "name": "@byteclaw/use-overflow-scroll-position",
   "version": "1.0.0",
   "description": "React hook for calculating number of pixels scrolled through in an overflow:scroll enabled container",
-  "main": "dist/use-overlay-scroll-position.cjs.js",
-  "umd:main": "dist/use-overlay-scroll-position.umd.js",
-  "jsnext:main": "dist/use-overlay-scroll-position.m.js",
-  "module": "dist/use-overlay-scroll-position.m.js",
+  "main": "dist/use-overflow-scroll-position.cjs.js",
+  "umd:main": "dist/use-overflow-scroll-position.umd.js",
+  "jsnext:main": "dist/use-overflow-scroll-position.m.js",
+  "module": "dist/use-overflow-scroll-position.m.js",
   "typings": "dist/index.d.js",
   "scripts": {
     "build": "npx tsc && rollup -c",
