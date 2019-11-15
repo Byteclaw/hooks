@@ -1,10 +1,14 @@
-import { MutableRefObject, useCallback, useLayoutEffect, useState } from 'react';
+import {
+  MutableRefObject,
+  useCallback,
+  useLayoutEffect,
+  useState,
+} from 'react';
 
 function useOverflowScrollPosition(ref: MutableRefObject<HTMLElement | null>) {
-  const [scrollProperties, setScrollProperties] = useState<[number | null, number | null]>([
-    null,
-    null,
-  ]);
+  const [scrollProperties, setScrollProperties] = useState<
+    [number | null, number | null]
+  >([null, null]);
 
   const handleScroll = useCallback(
     function handle() {

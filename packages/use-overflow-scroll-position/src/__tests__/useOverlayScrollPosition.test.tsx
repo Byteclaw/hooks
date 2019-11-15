@@ -1,5 +1,5 @@
+import { fireEvent, render } from '@testing-library/react';
 import React, { Fragment, ReactNode, useRef } from 'react';
-import { fireEvent, render } from 'react-testing-library';
 import { useOverflowScrollPosition } from '../index';
 
 function BigBox() {
