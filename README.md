@@ -1,7 +1,20 @@
 # @Byteclaw/hooks
+
 [![CircleCI](https://circleci.com/gh/Byteclaw/hooks/tree/master.svg?style=svg&circle-token=eb0ec74cc57584f66be91ba7b2f56285fd919b0c)](https://circleci.com/gh/Byteclaw/hooks/tree/master)
 
-Useful [React](https://github.com/facebook/react) hooks for your [Components](https://github.com/byteclaw/visage).
+Collection of useful [React](https://github.com/facebook/react) hooks for your Applications.
+
+## Installation
+
+```console
+npm install @byteclaw/hooks
+yarn add @byteclaw/hooks
+```
+
+## Packages
+
+- [`@byteclaw/hooks`](./packages/hooks) - Collection of all React hooks
+- [`@byteclaw/use-overflow-scroll-position`]('./packages/use-overflow-scroll-position) - React hook for tracking the scroll position inside an overflow:scroll enabled element
 
 ## Contributors
 
