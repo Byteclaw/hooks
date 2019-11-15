@@ -6,7 +6,7 @@
 
 ```console
 npm install @byteclaw/use-overflow-scroll-position
-yarn install @byteclaw/use-overflow-scroll-position
+yarn add @byteclaw/use-overflow-scroll-position
 ```
 
 ## Usage
