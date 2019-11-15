@@ -1,10 +1,10 @@
 {
-  "name": "@byteclaw/hooks",
+  "name": "@byteclaw/use-event-emitter",
   "version": "0.0.0",
-  "description": "Collection of useful React hooks for your applications",
-  "main": "dist/hooks.js",
-  "module": "dist/hooks.esm.js",
-  "unpkg": "dist/hooks.umd.js",
+  "description": "React hooks and components for construction of simple event emitters",
+  "main": "dist/use-event-emitter.js",
+  "module": "dist/use-event-emitter.esm.js",
+  "unpkg": "dist/use-event-emitter.umd.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.js",
@@ -16,16 +16,13 @@
     "test:watch": "jest --watch",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@byteclaw/use-event-emitter": "^0.0.0",
-    "@byteclaw/use-overflow-scroll-position": "^1.0.0"
-  },
   "peerDependencies": {
     "@types/react": "^16.9.11",
     "react": "^16.12.0"
   },
   "devDependencies": {
     "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
     "react-dom": "^16.12.0"
   },
   "sideEffects": false,
@@ -36,13 +33,18 @@
   "keywords": [
     "react",
     "hooks",
-    "collection"
+    "question",
+    "dialog",
+    "confirm",
+    "alert",
+    "notification",
+    "prompt"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/byteclaw/hooks/issues"
   },
-  "homepage": "https://github.com/byteclaw/hooks#readme",
+  "homepage": "https://github.com/byteclaw/hooks/packages/use-event-emitter#readme",
   "contributors": [
     {
       "name": "Michal Kvasničák",
