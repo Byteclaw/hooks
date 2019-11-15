@@ -11,3 +11,4 @@ build
 packages/**/*.tgz
 dist
 .vscode
+tsconfig.tsbuildinfo

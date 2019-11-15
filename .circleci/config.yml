@@ -4,14 +4,9 @@ jobs:
   build:
     working_directory: ~/hooks
     docker:
-      - image: circleci/node:10.12.0
-        environment:
-          CI: 1
+      - image: circleci/node:12.13.0
     steps:
       - checkout
-      - run:
-          name: Upgrade yarn to 1.12.3
-          command: sudo npm install -g yarn@1.12.3
       - run:
           name: Installing javascript dependencies
           command: yarn install
