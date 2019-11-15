@@ -3,5 +3,8 @@
     "incremental": true
   },
   "files": [],
-  "references": [{ "path": "./packages/use-overflow-scroll-position" }]
+  "references": [
+    { "path": "./packages/hooks" },
+    { "path": "./packages/use-overflow-scroll-position" }
+  ]
 }

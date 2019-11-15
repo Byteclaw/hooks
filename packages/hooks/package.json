@@ -1,0 +1,61 @@
+{
+  "name": "@byteclaw/hooks",
+  "version": "0.0.0",
+  "description": "Collection of useful React hooks for your applications",
+  "main": "dist/hooks.js",
+  "module": "dist/hooks.esm.js",
+  "unpkg": "dist/hooks.umd.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.js",
+  "scripts": {
+    "build": "microbundle build -o dist",
+    "prebuild": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@byteclaw/use-overflow-scroll-position": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.11",
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.3.2",
+    "react-dom": "^16.12.0"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteclaw/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "collection"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byteclaw/hooks/issues"
+  },
+  "homepage": "https://github.com/byteclaw/hooks#readme",
+  "contributors": [
+    {
+      "name": "Michal Kvasničák",
+      "url": "https://github.com/michalkvasnicak"
+    },
+    {
+      "name": "Juraj Hríb",
+      "url": "https://github.com/jurajhrib"
+    }
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
