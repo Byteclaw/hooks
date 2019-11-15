@@ -5,7 +5,7 @@
   "main": "dist/use-prompt.js",
   "module": "dist/use-prompt.esm.js",
   "unpkg": "dist/use-prompt.umd.js",
-  "source": "src/index.tsx",
+  "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.js",
   "scripts": {

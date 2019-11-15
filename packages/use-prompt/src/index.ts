@@ -1,6 +1,8 @@
 import { useEventEmitter } from '@byteclaw/use-event-emitter';
 import { useUniqueId } from '@byteclaw/use-unique-id';
-import React, {
+import {
+  Fragment,
+  createElement,
   cloneElement,
   ReactElement,
   useCallback,
@@ -58,8 +60,10 @@ export function Prompts() {
     };
   }, []);
 
-  return (
-    <>{prompts.map(({ id, prompt }) => cloneElement(prompt, { key: id }))}</>
+  return createElement(
+    Fragment,
+    {},
+    prompts.map(({ id, prompt }) => cloneElement(prompt, { key: id })),
   );
 }
 
