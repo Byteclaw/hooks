@@ -14,8 +14,9 @@ yarn add @byteclaw/hooks
 ## Packages
 
 - [`@byteclaw/hooks`](./packages/hooks) - Collection of all React hooks
-- [`@byteclaw/use-event-emitter`]('./packages/use-event-emitter) - React hooks and components for construction of simple event emitters
-- [`@byteclaw/use-overflow-scroll-position`]('./packages/use-overflow-scroll-position) - React hook for tracking the scroll position inside an overflow:scroll enabled element
+- [`@byteclaw/use-event-emitter`](./packages/use-event-emitter) - React hooks and components for construction of simple event emitters
+- [`@byteclaw/use-overflow-scroll-position`](./packages/use-overflow-scroll-position) - React hook for tracking the scroll position inside an overflow:scroll enabled element
+- [`@byteclaw/use-unique-id`](./packages/use-unique-id) - React hook to generate unique ids for your components
 
 ## Contributors
 
