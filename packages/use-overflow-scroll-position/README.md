@@ -14,7 +14,7 @@ yarn add @byteclaw/use-overflow-scroll-position
 Here is a quick example with a simple scrollable div container rendering a children. **It can be used with any element ref**:
 
 ```jsx
-import { useOverflowScrollPosition } from '@byteclaw/use-overflow';
+import { useOverflowScrollPosition } from '@byteclaw/use-overflow-scroll-position';
 
 function ScrollableBox(children) {
   const box = useRef(null);
