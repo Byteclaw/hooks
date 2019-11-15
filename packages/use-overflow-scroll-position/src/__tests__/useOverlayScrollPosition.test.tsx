@@ -1,5 +1,5 @@
 import { fireEvent, render } from '@testing-library/react';
-import React, { Fragment, ReactNode, useRef } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import { useOverflowScrollPosition } from '../index';
 
 function BigBox() {
@@ -16,7 +16,7 @@ function BigBox() {
 
   return (
     <div data-testid="bigbox" ref={box}>
-      {buffer.map(i => '∆')}
+      {buffer.map(() => '∆')}
     </div>
   );
 }
@@ -42,11 +42,11 @@ function Box({
   }
 
   return (
-    <Fragment>
+    <>
       <div data-testid="box" ref={box}>
         {children}
       </div>
-    </Fragment>
+    </>
   );
 }
 
