@@ -2,9 +2,16 @@
 
 [React](https://github.com/facebook/react) hook for tracking the scroll position inside an overflow:scroll enabled element.
 
-## Usage
-Here is a quick example with a simple scrollable div container rendering a children. **It can be used with any element ref**:
+## Installation
 
+```console
+npm install @byteclaw/use-overflow-scroll-position
+yarn install @byteclaw/use-overflow-scroll-position
+```
+
+## Usage
+
+Here is a quick example with a simple scrollable div container rendering a children. **It can be used with any element ref**:
 
 ```jsx
 import { useOverflowScrollPosition } from '@byteclaw/use-overflow';
@@ -13,17 +20,12 @@ function ScrollableBox(children) {
   const box = useRef(null);
   const [scrollPosition, scrollHeight] = useOverflowScrollPosition(box);
 
-  if (scrollPosition !== null && scrollPosition === scrollHeight) {
+  if (scrollPosition !== null && scrollPosition === scrollHeight) {
     console.log(`You've successfully scrolled to the end, yay!`);
   }
 
-  return (
-    <div ref={box}>
-      {children}
-    </div>
-  );
+  return <div ref={box}>{children}</div>;
 }
-
 ```
 
 ## API
