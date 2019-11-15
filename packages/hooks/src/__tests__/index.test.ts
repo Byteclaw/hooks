@@ -7,5 +7,10 @@ describe('all hooks', () => {
     expect(hooks.useEventEmitter).toBeDefined();
     expect(hooks.useEventEmitterInstance).toBeDefined();
     expect(hooks.useOverflowScrollPosition).toBeDefined();
+    expect(hooks.useUniqueId).toBeDefined();
+    expect(hooks.UniqueIdContext).toBeDefined();
+    expect(hooks.UniqueIdContextProvider).toBeDefined();
+    expect(hooks.usePrompt).toBeDefined();
+    expect(hooks.Prompts).toBeDefined();
   });
 });

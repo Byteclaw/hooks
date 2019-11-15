@@ -6,6 +6,8 @@
   "references": [
     { "path": "./packages/hooks" },
     { "path": "./packages/use-event-emitter" },
-    { "path": "./packages/use-overflow-scroll-position" }
+    { "path": "./packages/use-overflow-scroll-position" },
+    { "path": "./packages/use-prompt" },
+    { "path": "./packages/use-unique-id" }
   ]
 }

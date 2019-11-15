@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@byteclaw/use-event-emitter": "^0.0.0",
-    "@byteclaw/use-overflow-scroll-position": "^1.0.0"
+    "@byteclaw/use-overflow-scroll-position": "^1.0.0",
+    "@byteclaw/use-prompt": "^0.0.0",
+    "@byteclaw/use-unique-id": "^0.0.0"
   },
   "peerDependencies": {
     "@types/react": "^16.9.11",

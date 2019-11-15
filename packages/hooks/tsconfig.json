@@ -10,6 +10,8 @@
   "exclude": ["**/__tests__/**"],
   "references": [
     { "path": "../use-event-emitter" },
-    { "path": "../use-overflow-scroll-position" }
+    { "path": "../use-overflow-scroll-position" },
+    { "path": "../use-prompt" },
+    { "path": "../use-unique-id" }
   ]
 }
