@@ -1,0 +1,67 @@
+{
+  "name": "@byteclaw/use-prompt",
+  "version": "0.0.0",
+  "description": "React hook and component for prompting the user to input anything using your custom components",
+  "main": "dist/use-prompt.js",
+  "module": "dist/use-prompt.esm.js",
+  "unpkg": "dist/use-prompt.umd.js",
+  "source": "src/index.tsx",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.js",
+  "scripts": {
+    "build": "microbundle build -o dist",
+    "prebuild": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@byteclaw/use-event-emitter": "^0.0.0",
+    "@byteclaw/use-unique-id": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.11",
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.3.2",
+    "react-dom": "^16.12.0"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteclaw/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "question",
+    "dialog",
+    "confirm",
+    "alert",
+    "notification",
+    "prompt"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byteclaw/hooks/issues"
+  },
+  "homepage": "https://github.com/byteclaw/hooks/packages/use-prompt#readme",
+  "contributors": [
+    {
+      "name": "Michal Kvasničák",
+      "url": "https://github.com/michalkvasnicak"
+    },
+    {
+      "name": "Juraj Hríb",
+      "url": "https://github.com/jurajhrib"
+    }
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
