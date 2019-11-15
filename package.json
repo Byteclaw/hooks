@@ -15,11 +15,11 @@
     "typecheck": "tsc -b ."
   },
   "lint-staged": {
-    "src/**/*.json": [
+    "*.json": [
       "prettier --write",
       "git add"
     ],
-    "src/**/*.{ts,tsx}": [
+    "*.{ts,tsx}": [
       "eslint --fix",
       "git add"
     ]
