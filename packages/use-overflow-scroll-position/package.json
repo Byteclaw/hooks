@@ -54,31 +54,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!**/node_modules/**",
-      "!**/__tests__/**",
-      "!**/__fixtures__/**",
-      "!**/dist/**",
-      "!**/temp/**"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest/setup.js"
-    ],
-    "moduleDirectories": [
-      "./node_modules",
-      "./src"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
-    }
   }
 }
