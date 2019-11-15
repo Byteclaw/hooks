@@ -1,10 +1,10 @@
 {
-  "name": "@byteclaw/hooks",
+  "name": "@byteclaw/use-prompt",
   "version": "0.0.0",
-  "description": "Collection of useful React hooks for your applications",
-  "main": "dist/hooks.js",
-  "module": "dist/hooks.esm.js",
-  "unpkg": "dist/hooks.umd.js",
+  "description": "React hook and component for prompting the user to input anything using your custom components",
+  "main": "dist/use-prompt.js",
+  "module": "dist/use-prompt.esm.js",
+  "unpkg": "dist/use-prompt.umd.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.js",
@@ -18,8 +18,6 @@
   },
   "dependencies": {
     "@byteclaw/use-event-emitter": "^0.0.0",
-    "@byteclaw/use-overflow-scroll-position": "^1.0.0",
-    "@byteclaw/use-prompt": "^0.0.0",
     "@byteclaw/use-unique-id": "^0.0.0"
   },
   "peerDependencies": {
@@ -38,13 +36,18 @@
   "keywords": [
     "react",
     "hooks",
-    "collection"
+    "question",
+    "dialog",
+    "confirm",
+    "alert",
+    "notification",
+    "prompt"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/byteclaw/hooks/issues"
   },
-  "homepage": "https://github.com/byteclaw/hooks#readme",
+  "homepage": "https://github.com/byteclaw/hooks/packages/use-prompt#readme",
   "contributors": [
     {
       "name": "Michal Kvasničák",

@@ -1,10 +1,10 @@
 {
-  "name": "@byteclaw/hooks",
+  "name": "@byteclaw/use-unique-id",
   "version": "0.0.0",
-  "description": "Collection of useful React hooks for your applications",
-  "main": "dist/hooks.js",
-  "module": "dist/hooks.esm.js",
-  "unpkg": "dist/hooks.umd.js",
+  "description": "React hook to generate unique ids for your components",
+  "main": "dist/use-unique-id.js",
+  "module": "dist/use-unique-id.esm.js",
+  "unpkg": "dist/use-unique-id.umd.js",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.js",
@@ -15,12 +15,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@byteclaw/use-event-emitter": "^0.0.0",
-    "@byteclaw/use-overflow-scroll-position": "^1.0.0",
-    "@byteclaw/use-prompt": "^0.0.0",
-    "@byteclaw/use-unique-id": "^0.0.0"
   },
   "peerDependencies": {
     "@types/react": "^16.9.11",
@@ -38,13 +32,18 @@
   "keywords": [
     "react",
     "hooks",
-    "collection"
+    "question",
+    "dialog",
+    "confirm",
+    "alert",
+    "notification",
+    "prompt"
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/byteclaw/hooks/issues"
   },
-  "homepage": "https://github.com/byteclaw/hooks#readme",
+  "homepage": "https://github.com/byteclaw/hooks/packages/use-unique-id#readme",
   "contributors": [
     {
       "name": "Michal Kvasničák",

@@ -17,7 +17,7 @@ export function createEventEmitter<
     emit(event: TEvents, ...args: any[]) {
       (events[event] || []).forEach(listener => listener(...args));
     },
-    on(event: TEvents, listener: Function) {
+    on(event: TEvents, listener: Function): () => void {
       (events[event] = events[event] || []).push(listener);
 
       return () => {

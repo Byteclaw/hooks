@@ -1,4 +1,15 @@
 {
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "README.md",
+        "jest.config.js",
+        "tsconfig.json",
+        "*.test.ts",
+        "*.test.tsx"
+      ]
+    }
+  },
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
