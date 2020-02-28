@@ -12,6 +12,7 @@
     { "path": "../use-event-emitter" },
     { "path": "../use-overflow-scroll-position" },
     { "path": "../use-prompt" },
+    { "path": "../use-static-callback" },
     { "path": "../use-unique-id" }
   ]
 }

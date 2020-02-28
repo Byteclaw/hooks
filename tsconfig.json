@@ -8,6 +8,7 @@
     { "path": "./packages/use-event-emitter" },
     { "path": "./packages/use-overflow-scroll-position" },
     { "path": "./packages/use-prompt" },
+    { "path": "./packages/use-static-callback" },
     { "path": "./packages/use-unique-id" }
   ]
 }
