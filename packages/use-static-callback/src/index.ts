@@ -22,6 +22,11 @@ function arraysNotEqual(a: any[], b: any[]): boolean {
   return false;
 }
 
+/**
+ * Creates a callback from function declaration
+ *
+ * On call it passes arguments provided as an array in second argument
+ */
 export function useStaticCallback<T extends () => any>(
   callback: T,
 ): () => ExtractReturn<T>;
@@ -46,6 +51,40 @@ export function useStaticCallback(
     previousArgs.current = args as any;
 
     returnedCallback.current = () => callback(...args);
+  }
+
+  return returnedCallback.current!;
+}
+
+/**
+ * Creates a callback using a callback creator
+ *
+ * Passes arguments provided as an array in second argument to the callback creator
+ * and returns the result as a callback
+ */
+export function useStaticCallbackCreator<
+  T extends () => (...args: any[]) => any
+>(callback: T): ExtractReturn<T>;
+export function useStaticCallbackCreator<
+  T extends (...args: any[]) => (...args: any[]) => any
+>(callback: T, args: ExtractArgs<T>): ExtractReturn<T>;
+
+export function useStaticCallbackCreator(
+  callbackCreator: Function,
+  args: any[] = [],
+): Function {
+  const previousCallbackCreator = useRef<Function>();
+  const previousArgs = useRef([]);
+  const returnedCallback = useRef<Function>();
+
+  if (
+    previousCallbackCreator.current !== callbackCreator ||
+    arraysNotEqual(previousArgs.current, args)
+  ) {
+    previousCallbackCreator.current = callbackCreator;
+    previousArgs.current = args as any;
+
+    returnedCallback.current = callbackCreator(...args);
   }
 
   return returnedCallback.current!;

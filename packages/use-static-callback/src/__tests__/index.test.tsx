@@ -1,48 +1,102 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { useStaticCallback } from '..';
-
-function cb(): number {
-  return 10;
-}
-
-function cbWithArgs(a: string, b: boolean): [string, boolean] {
-  return [a, b];
-}
+import { useStaticCallback, useStaticCallbackCreator } from '..';
 
 describe('use-static-callback', () => {
-  it('works correctly without arguments', () => {
-    const { result, rerender } = renderHook(() => useStaticCallback(cb));
+  describe('useStaticCallback hook', () => {
+    function cb(): number {
+      return 10;
+    }
 
-    act(() => expect(result.current()).toBe(10));
+    function cbWithArgs(a: string, b: boolean): [string, boolean] {
+      return [a, b];
+    }
 
-    const prev = result.current;
+    it('works correctly without arguments', () => {
+      const { result, rerender } = renderHook(() => useStaticCallback(cb));
 
-    rerender();
+      act(() => expect(result.current()).toBe(10));
 
-    expect(prev).toEqual(result.current);
+      const prev = result.current;
+
+      rerender();
+
+      expect(prev).toEqual(result.current);
+    });
+
+    it('works correctly with arguments', () => {
+      let args: [string, boolean] = ['a', true];
+
+      const { rerender, result } = renderHook(() =>
+        useStaticCallback(cbWithArgs, args),
+      );
+
+      const prev = result.current;
+
+      act(() => expect(result.current()).toEqual(args));
+
+      rerender();
+
+      expect(prev).toEqual(result.current);
+
+      args = ['b', false];
+
+      rerender();
+
+      expect(prev).not.toEqual(result.current);
+
+      act(() => expect(result.current()).toEqual(args));
+    });
   });
 
-  it('works correctly with arguments', () => {
-    let args: [string, boolean] = ['a', true];
+  describe('useStaticCallbackCreator hook', () => {
+    function createCb() {
+      return jest.fn(() => 10);
+    }
 
-    const { rerender, result } = renderHook(() =>
-      useStaticCallback(cbWithArgs, args),
-    );
+    function createCbWithArgs(a: string, b: boolean) {
+      return jest.fn((num: number) => [a, b, num]);
+    }
 
-    const prev = result.current;
+    it('works correctly without arguments', () => {
+      const { result, rerender } = renderHook(() =>
+        useStaticCallbackCreator(createCb),
+      );
 
-    act(() => expect(result.current()).toEqual(args));
+      act(() => expect(result.current()).toBe(10));
 
-    rerender();
+      const prev = result.current;
 
-    expect(prev).toEqual(result.current);
+      rerender();
 
-    args = ['b', false];
+      expect(prev).toEqual(result.current);
 
-    rerender();
+      expect(result.current).toHaveBeenCalledTimes(1);
+    });
 
-    expect(prev).not.toEqual(result.current);
+    it('works correctly with arguments', () => {
+      let args: [string, boolean] = ['a', true];
 
-    act(() => expect(result.current()).toEqual(args));
+      const { rerender, result } = renderHook(() =>
+        useStaticCallbackCreator(createCbWithArgs, args),
+      );
+
+      const prev = result.current;
+
+      act(() => expect(result.current(11)).toEqual([...args, 11]));
+
+      expect(prev).toHaveBeenCalledWith(11);
+
+      rerender();
+
+      expect(prev).toEqual(result.current);
+
+      args = ['b', false];
+
+      rerender();
+
+      expect(prev).not.toEqual(result.current);
+
+      act(() => expect(result.current(12)).toEqual([...args, 12]));
+    });
   });
 });
