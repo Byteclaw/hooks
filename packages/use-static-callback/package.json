@@ -1,0 +1,56 @@
+{
+  "name": "@byteclaw/use-static-callback",
+  "version": "0.0.0",
+  "description": "React's useCallback hook for functions defined outside",
+  "main": "dist/use-static-callback.js",
+  "module": "dist/use-static-callback.esm.js",
+  "unpkg": "dist/use-static-callback.umd.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.js",
+  "scripts": {
+    "build": "microbundle build -o dist",
+    "prebuild": "rimraf dist",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.11",
+    "react": "^16.12.0"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byteclaw/hooks.git"
+  },
+  "keywords": [
+    "react",
+    "use-callback",
+    "hooks",
+    "functions",
+    "callbacks"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/byteclaw/hooks/issues"
+  },
+  "homepage": "https://github.com/byteclaw/hooks/packages/use-static-callback#readme",
+  "contributors": [
+    {
+      "name": "Michal Kvasničák",
+      "url": "https://github.com/michalkvasnicak"
+    },
+    {
+      "name": "Juraj Hríb",
+      "url": "https://github.com/jurajhrib"
+    }
+  ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
