@@ -24,10 +24,6 @@
     "@types/react": "^16.9.11",
     "react": "^16.12.0"
   },
-  "devDependencies": {
-    "@testing-library/react": "^9.3.2",
-    "react-dom": "^16.12.0"
-  },
   "sideEffects": false,
   "repository": {
     "type": "git",
