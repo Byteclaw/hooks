@@ -1,6 +1,6 @@
 {
   "name": "@byteclaw/use-static-callback",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "React's useCallback hook for function declarations",
   "main": "dist/use-static-callback.js",
   "module": "dist/use-static-callback.esm.js",
