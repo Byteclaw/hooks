@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>1.1.2 (2020-05-21)</small>
+
+**Note:** Version bump only for package @byteclaw/hooks
+
+
+
+
+
 ## <small>1.1.1 (2020-02-28)</small>
 
 * fix(hooks): fix missing export of use-static-callback ([8544586](https://github.com/byteclaw/hooks/commit/8544586))
