@@ -30,8 +30,13 @@ function promptReducer(
     }
     case 'PROMPT': {
       const { id, prompt } = action;
+      const notFound = value.findIndex(p => p.id === id) === -1;
 
-      return [...value, { id, prompt }];
+      if (notFound) {
+        return [...value, { id, prompt }];
+      }
+
+      return value;
     }
     default:
       return value;
@@ -67,11 +72,11 @@ export function Prompts() {
   );
 }
 
-interface PrompFunctionProps<TAnswer> {
+export interface PrompFunctionProps<TAnswer> {
   answer(value: TAnswer): void;
 }
 
-interface PromptFunction<TAnswer> {
+export interface PromptFunction<TAnswer> {
   (prompt: (props: PrompFunctionProps<TAnswer>) => ReactElement): Promise<
     TAnswer
   >;
