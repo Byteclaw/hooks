@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>1.1.1 (2020-12-28)</small>
+
+* fix: allow react 17 ([2b4e3f9](https://github.com/byteclaw/hooks/commit/2b4e3f9))
+
+
+
+
+
 ## 1.1.0 (2020-02-28)
 
 * feat(use-static-callback): add useStaticCallbackCreator hook ([4b75e3d](https://github.com/byteclaw/hooks/commit/4b75e3d))

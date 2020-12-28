@@ -1,6 +1,6 @@
 {
   "name": "@byteclaw/use-prompt",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React hook and component for prompting the user to input anything using your custom components",
   "main": "dist/use-prompt.js",
   "module": "dist/use-prompt.esm.js",
@@ -17,8 +17,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@byteclaw/use-event-emitter": "^1.0.0",
-    "@byteclaw/use-unique-id": "^1.0.0"
+    "@byteclaw/use-event-emitter": "^1.0.1",
+    "@byteclaw/use-unique-id": "^1.0.1"
   },
   "peerDependencies": {
     "@types/react": "^16.9.11",
