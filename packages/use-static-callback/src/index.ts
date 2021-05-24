@@ -63,10 +63,10 @@ export function useStaticCallback(
  * and returns the result as a callback
  */
 export function useStaticCallbackCreator<
-  T extends () => (...args: any[]) => any
+  T extends () => (...args: any[]) => any,
 >(callback: T): ExtractReturn<T>;
 export function useStaticCallbackCreator<
-  T extends (...args: any[]) => (...args: any[]) => any
+  T extends (...args: any[]) => (...args1: any[]) => any,
 >(callback: T, args: ExtractArgs<T>): ExtractReturn<T>;
 
 export function useStaticCallbackCreator(
