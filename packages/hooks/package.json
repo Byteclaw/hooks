@@ -1,6 +1,6 @@
 {
   "name": "@byteclaw/hooks",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Collection of useful React hooks for your applications",
   "main": "dist/hooks.js",
   "module": "dist/hooks.esm.js",
@@ -19,9 +19,9 @@
   "dependencies": {
     "@byteclaw/use-event-emitter": "^1.0.2",
     "@byteclaw/use-overflow-scroll-position": "^1.0.3",
-    "@byteclaw/use-prompt": "^1.1.2",
+    "@byteclaw/use-prompt": "^1.1.3",
     "@byteclaw/use-static-callback": "^1.1.2",
-    "@byteclaw/use-unique-id": "^1.0.1"
+    "@byteclaw/use-unique-id": "^1.0.2"
   },
   "peerDependencies": {
     "@types/react": "^16.9.11 || ^17.0.0",
