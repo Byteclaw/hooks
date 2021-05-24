@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@types/react": "^16.9.11",
+    "@types/react": "^16.9.11 || ^17.0.0",
     "react": "^16.12.0 || ^17.x"
   },
   "sideEffects": false,
@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/byteclaw/hooks/issues"
   },
-  "homepage": "https://github.com/byteclaw/hooks/packages/use-event-emitter#readme",
+  "homepage": "https://github.com/byteclaw/hooks/tree/master/packages/use-event-emitter#readme",
   "contributors": [
     {
       "name": "Michal Kvasničák",

@@ -49,9 +49,10 @@ export function Prompts() {
 
   // listen to events
   useEffect(() => {
-    const unsubcribeAnswer = eventEmitter.on($$ANSWER_EVENT, (
-      id: number /* value: any */,
-    ) => dispatch({ type: 'ANSWER', id }));
+    const unsubcribeAnswer = eventEmitter.on(
+      $$ANSWER_EVENT,
+      (id: number /* value: any */) => dispatch({ type: 'ANSWER', id }),
+    );
 
     const unsubcribePrompt = eventEmitter.on(
       $$PROMPT_EVENT,
@@ -77,60 +78,62 @@ export interface PrompFunctionProps<TAnswer> {
 }
 
 export interface PromptFunction<TAnswer> {
-  (prompt: (props: PrompFunctionProps<TAnswer>) => ReactElement): Promise<
-    TAnswer
-  >;
+  (
+    prompt: (props: PrompFunctionProps<TAnswer>) => ReactElement,
+  ): Promise<TAnswer>;
 }
 
 export function usePrompt<TAnswer>(): [PromptFunction<TAnswer>, boolean] {
   const id = useUniqueId();
   const eventEmitter = useEventEmitter();
   const [prompting, setPrompting] = useState(false);
-  const prompt: PromptFunction<TAnswer> = useCallback(renderer => {
-    return new Promise((resolve, reject) => {
-      // subscribe to answer
-      const handler: { unsubscribe: Function | null } = {
-        unsubscribe: null,
-      };
+  const prompt: PromptFunction<TAnswer> = useCallback(
+    renderer =>
+      new Promise((resolve, reject) => {
+        // subscribe to answer
+        const handler: { unsubscribe: Function | null } = {
+          unsubscribe: null,
+        };
 
-      try {
-        handler.unsubscribe = eventEmitter.on(
-          $$ANSWER_EVENT,
-          (promptId: number, value: any) => {
-            if (id === promptId) {
-              setPrompting(false);
+        try {
+          handler.unsubscribe = eventEmitter.on(
+            $$ANSWER_EVENT,
+            (promptId: number, value: any) => {
+              if (id === promptId) {
+                setPrompting(false);
 
-              if (handler.unsubscribe) {
-                handler.unsubscribe();
-                handler.unsubscribe = null;
+                if (handler.unsubscribe) {
+                  handler.unsubscribe();
+                  handler.unsubscribe = null;
+                }
+
+                resolve(value);
               }
+            },
+          );
 
-              resolve(value);
-            }
-          },
-        );
+          setPrompting(true);
 
-        setPrompting(true);
+          const comp = renderer({
+            answer: value => {
+              eventEmitter.emit($$ANSWER_EVENT, id, value);
+            },
+          });
 
-        const comp = renderer({
-          answer: value => {
-            eventEmitter.emit($$ANSWER_EVENT, id, value);
-          },
-        });
+          eventEmitter.emit($$PROMPT_EVENT, id, comp);
+        } catch (e) {
+          if (handler.unsubscribe) {
+            handler.unsubscribe();
+            handler.unsubscribe = null;
+          }
 
-        eventEmitter.emit($$PROMPT_EVENT, id, comp);
-      } catch (e) {
-        if (handler.unsubscribe) {
-          handler.unsubscribe();
-          handler.unsubscribe = null;
+          setPrompting(false);
+
+          reject(e);
         }
-
-        setPrompting(false);
-
-        reject(e);
-      }
-    });
-  }, []);
+      }),
+    [],
+  );
 
   return [prompt, prompting];
 }

@@ -3,15 +3,14 @@
     "jest": true,
     "browser": true
   },
-  "extends": [
-    "airbnb-typescript",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
-  ],
+  "extends": ["airbnb-typescript", "prettier"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/no-implied-eval": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "@typescript-eslint/return-await": "off",
     "consistent-return": "off",
     "default-case": "off",
     "import/prefer-default-export": "off",
@@ -20,6 +19,7 @@
     "prettier/prettier": "error",
     "react/no-multi-comp": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "no-continue": "off",
     "no-nested-ternary": "off",
     "no-plusplus": "off"

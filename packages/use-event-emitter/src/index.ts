@@ -9,7 +9,7 @@ interface EventEmitter<TEvents extends string> {
  * Creates event emitter instance
  */
 export function createEventEmitter<
-  TEvents extends string = string
+  TEvents extends string = string,
 >(): EventEmitter<TEvents> {
   const events: Record<TEvents, Function[]> = {} as Record<TEvents, Function[]>;
 
@@ -37,7 +37,7 @@ EventEmitterContext.displayName = 'EventEmitterContext';
  * Connects to event emitter in context
  */
 export function useEventEmitter<
-  TEvents extends string = string
+  TEvents extends string = string,
 >(): EventEmitter<TEvents> {
   return useContext(EventEmitterContext);
 }
@@ -47,7 +47,7 @@ export function useEventEmitter<
  * All subsequent calls return the same instance
  */
 export function useEventEmitterInstance<
-  TEvents extends string = string
+  TEvents extends string = string,
 >(): EventEmitter<TEvents> {
   return useState(createEventEmitter())[0];
 }
