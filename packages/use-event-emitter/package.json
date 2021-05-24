@@ -1,6 +1,6 @@
 {
   "name": "@byteclaw/use-event-emitter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hooks and components for construction of simple event emitters",
   "main": "dist/use-event-emitter.js",
   "module": "dist/use-event-emitter.esm.js",

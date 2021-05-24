@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [1.1.4](https://github.com/byteclaw/hooks/compare/@byteclaw/hooks@1.1.3...@byteclaw/hooks@1.1.4) (2021-05-24)
+
+**Note:** Version bump only for package @byteclaw/hooks
+
+
+
+
+
 ## <small>1.1.3 (2020-12-28)</small>
 
 * fix: allow react 17 ([2b4e3f9](https://github.com/byteclaw/hooks/commit/2b4e3f9))
